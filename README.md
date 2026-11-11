@@ -43,10 +43,7 @@
 
 需要 JDK 17 和 Android SDK（compileSdk 35）。
 
-1. 把 [`local.properties.example`](local.properties.example) 复制一份，改名为 `local.properties`，按里面的注释填写（都是可选的）：
-   - `sdk.dir`：Android SDK 的位置（用 Android Studio 打开工程会自动生成）；
-   - `baidu.appKey` / `baidu.secretKey`：填了以后安装包自带 Key，装好后不用在平板上再输入；
-   - `web.defaultUrl` / `web.defaultName`：默认的自建视频服务器，一般不需要。
+1. （可选）把 [`local.properties.example`](local.properties.example) 复制一份，改名为 `local.properties`，填上百度网盘开放平台的 `baidu.appKey` / `baidu.secretKey`。填了以后安装包自带 Key，装好后不用在平板上再输入；不填就在 App 的家长设置里填。
 
    `local.properties` 里有你自己的 Key，已经被 `.gitignore` 排除，不要提交到代码仓库。
 

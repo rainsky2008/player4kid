@@ -7,7 +7,7 @@ plugins {
 
 val localProps = Properties().apply {
     val f = rootProject.file("local.properties")
-    // 按 UTF-8 读，local.properties 里可以写中文（如 web.defaultName=英语动画）
+    // 按 UTF-8 读，local.properties 里可以写中文
     if (f.exists()) f.reader(Charsets.UTF_8).use { load(it) }
 }
 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 音频播放列表的一行：≡ 拖动调整顺序 / ▶ 正在播放 / 名称（太长换行，显示完整） / ✕ 删除 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground"
+    android:gravity="center_vertical"
+    android:minHeight="56dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imgDrag"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:alpha="0.6"
+        android:contentDescription="按住拖动，调整顺序"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_drag_white" />
+
+    <TextView
+        android:id="@+id/txtPlaying"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        android:text="▶"
+        android:textColor="@color/yellow"
+        android:textSize="15sp"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        tools:text="三只小猪" />
+
+    <ImageButton
+        android:id="@+id/btnRemove"
+        android:layout_width="52dp"
+        android:layout_height="match_parent"
+        android:alpha="0.6"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="从播放列表删除"
+        android:scaleType="center"
+        android:src="@drawable/ic_close_white" />
+</LinearLayout>

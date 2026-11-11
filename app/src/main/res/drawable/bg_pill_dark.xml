@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 深色背景上的胶囊按钮（播放列表 收起 / 展开） -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="#33FFFFFF">
+    <item>
+        <shape>
+            <solid android:color="#26FFFFFF" />
+            <corners android:radius="22dp" />
+        </shape>
+    </item>
+</ripple>

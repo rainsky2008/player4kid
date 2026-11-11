@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 白色卡片上的圆形按钮（浅暖色底，能看出按钮范围） -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="#22000000">
+    <item>
+        <shape android:shape="oval"><solid android:color="#FFFFF1DE" /></shape>
+    </item>
+</ripple>

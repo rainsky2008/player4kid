@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_round_button"
+            android:contentDescription="返回"
+            android:padding="11dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:text="家长设置"
+            android:textColor="@color/text"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/KidButton"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:minHeight="44dp"
+            android:text="保存"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- ========== 系统 ========== -->
+            <TextView style="@style/ParentSection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:text="系统" />
+
+            <LinearLayout style="@style/ParentCard" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnSystemSettings"
+                        style="@style/ParentButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:text="系统设置" />
+
+                    <Button
+                        android:id="@+id/btnWifi"
+                        style="@style/ParentButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="1"
+                        android:text="WLAN 设置" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnTestSound"
+                    style="@style/ParentButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🔊 测试喇叭（播放 2 秒测试音）" />
+
+                <Button
+                    android:id="@+id/btnOtherLauncher"
+                    style="@style/ParentButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="打开原来的桌面（临时退出儿童模式）" />
+            </LinearLayout>
+
+            <!-- ========== 百度网盘账号 ========== -->
+            <TextView style="@style/ParentSection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="百度网盘" />
+
+            <LinearLayout style="@style/ParentCard" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtAccount"
+                    style="@style/ParentText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="已登录：xxx（超级会员）" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnLogin"
+                        style="@style/ParentButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:text="扫码登录" />
+
+                    <Button
+                        android:id="@+id/btnLogout"
+                        style="@style/ParentButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:text="退出登录" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/ParentText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="开放平台 AppKey" />
+
+                <EditText
+                    android:id="@+id/editAppKey"
+                    style="@style/ParentEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="pan.baidu.com/union 创建应用后获得"
+                    android:inputType="text" />
+
+                <TextView
+                    style="@style/ParentText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="开放平台 SecretKey" />
+
+                <EditText
+                    android:id="@+id/editSecretKey"
+                    style="@style/ParentEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <!-- ========== 资源目录 ========== -->
+            <TextView style="@style/ParentSection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="给孩子看的网盘目录" />
+
+            <LinearLayout style="@style/ParentCard" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                <TextView style="@style/ParentText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="资源目录（里面的每个文件夹都会单独显示在桌面上）" />
+
+                <TextView
+                    android:id="@+id/txtPanHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:drawableStart="@drawable/ic_folder"
+                    android:drawablePadding="12dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/text"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    tools:text="/apps/player4kid" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnPanHome"
+                        style="@style/ParentButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:text="更改资源目录" />
+
+                    <Button
+                        android:id="@+id/btnPanHomeDefault"
+                        style="@style/ParentButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:text="恢复默认" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="以后把视频、音频按文件夹放进这个目录就行，新建的文件夹会自动出现在桌面上。网盘 App 里显示为“我的应用数据 → player4kid”。"
+                    android:textColor="@color/text_sub"
+                    android:textSize="13sp" />
+
+                <TextView style="@style/ParentText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="其他目录（每个目录一张卡片，一般不需要）" />
+
+                <LinearLayout
+                    android:id="@+id/dirList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="vertical" />
+
+                <Button
+                    android:id="@+id/btnAddDir"
+                    style="@style/ParentButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="＋ 添加其他目录" />
+
+                <Button
+                    android:id="@+id/btnClearCache"
+                    style="@style/ParentButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="刷新目录（网盘或视频服务器里新加了文件后点这里）" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="目录列表会缓存 6 小时以节省接口调用次数；孩子界面长按目录标题也可刷新。"
+                    android:textColor="@color/text_sub"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- ========== 视频服务器（旧版 English Player） ========== -->
+            <TextView style="@style/ParentSection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="视频服务器" />
+
+            <LinearLayout style="@style/ParentCard" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/webList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <Button
+                    android:id="@+id/btnAddWeb"
+                    style="@style/ParentButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="＋ 添加视频服务器" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="旧版播放器（English Player）的服务器：不需要登录网盘，直接播放。服务器上需要有 seriesList.json（节目列表）和 {id}/list.json（剧集列表）。"
+                    android:textColor="@color/text_sub"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- ========== 时长 ========== -->
+            <TextView style="@style/ParentSection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="观看时长（音频不限时）" />
+
+            <LinearLayout style="@style/ParentCard" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                <TextView style="@style/ParentText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="每天可看视频（分钟）" />
+
+                <EditText
+                    android:id="@+id/editDaily"
+                    style="@style/ParentEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+                <TextView style="@style/ParentText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="每次连续观看（分钟），到时间强制休息" />
+
+                <EditText
+                    android:id="@+id/editSession"
+                    style="@style/ParentEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+                <TextView style="@style/ParentText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="每次休息（分钟）" />
+
+                <EditText
+                    android:id="@+id/editRest"
+                    style="@style/ParentEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+                <TextView style="@style/ParentText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="听音频时，无操作多少秒后息屏" />
+
+                <EditText
+                    android:id="@+id/editScreenOff"
+                    style="@style/ParentEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/txtToday"
+                    style="@style/ParentText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold"
+                    tools:text="今天已看 35 分钟，剩余 25 分钟" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnBonus"
+                        style="@style/ParentButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:text="今天加15分钟" />
+
+                    <Button
+                        android:id="@+id/btnEndRest"
+                        style="@style/ParentButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:text="结束休息" />
+
+                    <Button
+                        android:id="@+id/btnResetToday"
+                        style="@style/ParentButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:text="清零今天" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ========== 播放 ========== -->
+            <TextView style="@style/ParentSection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="视频播放方式" />
+
+            <LinearLayout style="@style/ParentCard" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:id="@+id/radioMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/modeStream480"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="转码 480P（最省流量，兼容所有格式）" />
+
+                    <RadioButton
+                        android:id="@+id/modeStream720"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="转码 720P（推荐）" />
+
+                    <RadioButton
+                        android:id="@+id/modeStream1080"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="转码 1080P（需要会员）" />
+
+                    <RadioButton
+                        android:id="@+id/modeOriginal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="原画（直接播放原文件，非会员可能较慢）" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="非会员使用转码播放时，每个视频开始前需要等待几秒（网盘的广告时间）。转码失败时会自动改用原画播放。"
+                    android:textColor="@color/text_sub"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- ========== 桌面与防护 ========== -->
+            <TextView style="@style/ParentSection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="桌面与防护" />
+
+            <LinearLayout style="@style/ParentCard" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtKioskState"
+                    style="@style/ParentText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4dp"
+                    tools:text="默认桌面：是\n设备管理器：已激活\n锁定模式：未启用" />
+
+                <CheckBox
+                    android:id="@+id/checkKiosk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="防止孩子退出（切走后自动回到本桌面）" />
+
+                <Button
+                    android:id="@+id/btnSetHome"
+                    style="@style/ParentButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="设为默认桌面" />
+
+                <Button
+                    android:id="@+id/btnAdmin"
+                    style="@style/ParentButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="激活设备管理器（用于听音频时息屏）" />
+
+                <Button
+                    android:id="@+id/btnChangePin"
+                    style="@style/ParentButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="修改家长密码" />
+
+                <Button
+                    android:id="@+id/btnReleaseOwner"
+                    style="@style/ParentButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="解除设备所有者（卸载前使用）"
+                    android:textColor="@color/red"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:textColor="@color/text_sub"
+                android:textSize="12sp"
+                tools:text="宝贝视听 1.0.0" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

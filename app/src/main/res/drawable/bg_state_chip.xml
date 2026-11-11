@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- “睡觉”的视频卡片中间的提示：🌙 明天再看 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/ink" />
+    <corners android:radius="18dp" />
+</shape>

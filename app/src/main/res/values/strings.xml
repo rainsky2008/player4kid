@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">宝贝视听</string>
+    <string name="admin_desc">用于播放音频时自动息屏，以及儿童锁定模式。</string>
+</resources>

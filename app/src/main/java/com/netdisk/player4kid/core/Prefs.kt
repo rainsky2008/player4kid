@@ -85,7 +85,7 @@ class Prefs(context: Context) {
         }
         set(v) = sp.edit().putString("root_dirs", JSONArray(v.distinct()).toString()).apply()
 
-    /** 视频服务器（旧版播放器的服务器格式）；没有设置过时用 local.properties 里配置的默认服务器（没配置就没有） */
+    /** 视频服务器（可选）；没有设置过时用 local.properties 里配置的默认服务器（没配置就没有） */
     var webSources: List<WebSource>
         get() {
             val raw = sp.getString("web_sources", null) ?: return WebLibrary.DEFAULT_SOURCES

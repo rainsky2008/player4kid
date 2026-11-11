@@ -69,7 +69,7 @@ class App : Application() {
             private set
         lateinit var api: BaiduApi
             private set
-        /** 自建视频服务器（旧版播放器的节目） */
+        /** 自建视频服务器（可选） */
         lateinit var web: WebLibrary
             private set
 

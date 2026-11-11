@@ -19,7 +19,7 @@ import java.util.concurrent.ConcurrentHashMap
 data class WebSource(val name: String, val url: String)
 
 /**
- * 自建视频服务器（旧版 English Player 使用的格式）。
+ * 自建视频服务器（可选）。
  *
  *   {地址}seriesList.json   → [ {"id": 1, "name": "小猪佩奇 第一季", "imageUrl": "http://…/xx.jpg"}, … ]
  *   {地址}{id}/list.json    → {"season": 1, "title": "1",

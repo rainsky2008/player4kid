@@ -302,7 +302,7 @@ class ParentActivity : AppCompatActivity() {
     private fun addWebSource() {
         val pad = (20 * resources.displayMetrics.density).toInt()
         val existing = prefs.webSources
-        // 旧版播放器的服务器被移除后，方便再加回来
+        // 默认服务器被移除后，方便再加回来
         val default = WebLibrary.DEFAULT_SOURCES.firstOrNull { d -> existing.none { it.url == d.url } }
         val editName = EditText(this).apply {
             hint = "名称（显示在桌面上）"

@@ -8,13 +8,10 @@
     <color name="primary_dark">#E8622E</color>
     <color name="green">#3DBE7A</color>
     <color name="blue">#3D8BFD</color>
-    <color name="purple">#9B6BF2</color>
     <color name="pink">#FF6B9A</color>
-    <color name="teal">#22B8B0</color>
     <color name="yellow">#FFC233</color>
     <color name="red">#E5484D</color>
     <color name="card">#FFFFFF</color>
-    <color name="divider">#1F3A3446</color>
     <color name="scrim">#CC000000</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>

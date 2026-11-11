@@ -251,7 +251,7 @@
                     android:textSize="13sp" />
             </LinearLayout>
 
-            <!-- ========== 视频服务器（旧版 English Player） ========== -->
+            <!-- ========== 视频服务器（可选） ========== -->
             <TextView style="@style/ParentSection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="视频服务器" />
 
             <LinearLayout style="@style/ParentCard" android:layout_width="match_parent" android:layout_height="wrap_content">
@@ -273,7 +273,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:text="旧版播放器（English Player）的服务器：不需要登录网盘，直接播放。服务器上需要有 seriesList.json（节目列表）和 {id}/list.json（剧集列表）。"
+                    android:text="可选：自建的视频服务器，不需要登录网盘，直接播放。服务器上需要有 seriesList.json（节目列表）和 {id}/list.json（剧集列表）。"
                     android:textColor="@color/text_sub"
                     android:textSize="13sp" />
             </LinearLayout>

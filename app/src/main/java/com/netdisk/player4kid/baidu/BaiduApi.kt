@@ -243,7 +243,7 @@ class BaiduApi(
         val f = File(cacheDir, hash(key))
         if (!f.exists()) null else {
             val o = JSONObject(f.readText())
-            // 旧版本写的缓存也按现在的规则重新排一次
+            // 以前写的缓存也按现在的排序规则重新排一次
             o.getLong("time") to PanFile.listFromJson(o.getJSONArray("list").toString())
                 .sortedWith(PanFile.NATURAL_ORDER)
         }

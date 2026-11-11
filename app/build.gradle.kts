@@ -38,10 +38,10 @@ android {
         buildConfigField("String", "BAIDU_APP_KEY", "\"${secretValue("baidu.appKey")}\"")
         buildConfigField("String", "BAIDU_SECRET_KEY", "\"${secretValue("baidu.secretKey")}\"")
 
-        // 默认的视频服务器（旧版 English Player 的服务器格式）：只在自己的 local.properties 里配置，
+        // 默认的视频服务器（可选）：只在自己的 local.properties 里配置，
         // 代码仓库里不放任何服务器地址；公开版也不带。例如：
-        //   web.defaultUrl=http://192.168.1.10/
-        //   web.defaultName=英语动画
+        //   web.defaultUrl=http://服务器地址/
+        //   web.defaultName=卡片名称
         buildConfigField("String", "DEFAULT_WEB_URL", "\"${secretValue("web.defaultUrl")}\"")
         buildConfigField("String", "DEFAULT_WEB_NAME", "\"${configValue("web.defaultName")}\"")
     }
